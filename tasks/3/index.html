@@ -1,0 +1,175 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<img src="logo-white.png" alt="logo" width="460" height="345">
+
+<h1 id="title">Covid-19 Pre-screening Form</h1>
+<div id="form-outer">
+  <form id="survey-form" method="GET" action="#">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name"> Name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Please enter your full name"
+          required>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="contact number"> Contact Number: </label>
+      </div>
+      <div class="rightTab">
+        <input type="text" name="contactNumber" id="number" class="input-field" required
+          placeholder="Please enter your contact numbers">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="email-label" for="email"> Email Address: </label>
+      </div>
+      <div class="rightTab">
+        <input type="email" name="email" id="email" class="input-field" required
+          placeholder="Please enter your email address">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" required for="age">Age: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field"
+          placeholder="Please enter your age">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="userRating"> Gender:</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Male<input name="radio-buttons" value="1" type="radio" class="userRatings"></label>
+          </li>
+          <li class="radio"><label>Female<input name="radio-buttons" value="2" type="radio" class="userRatings"></label>
+          </li>
+          <li class="radio"><label>Other<input name="radio-buttons" value="3" type="radio" class="userRatings"></label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Do you or have you had a fever of above 37.8 degrees in the past three days? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox" onclick=>No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Have you recently lost or had a reduction in your senses of smell or taste? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Do you have a sore throat? ? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Do you have a dry cough? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Do you have a runny nose? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Have you been in contact with someone who has tested positive for or suspected they
+          were positive for Covid-19 (corona virus?) in the last two weeks?? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Have you tested positive for Covid-19 or are you awaiting test results for Covid-19
+          within the last 10 days? </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="yes" type="checkbox">Yes</label>
+          </li>
+          <li class="checkbox"><input name="prefer" value="no" type="checkbox">No</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function validate(form) {
+        // Checking if at least one period button is selected. Or not. 
+        if (!document.survey - form.prefer[0].checked && !document.survey - form.prefer[1].checked) {
+
+          //alert("Please choose between yes and no"); 
+          document.getElementById('my_msg').innerHTML = "Please choose between yes and no";
+          return false;
+        }
+
+      }
+    </script>
+
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">Is there anything you want to add?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment"
+          placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+
+  </form>
+</div>
+</main>
